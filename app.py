@@ -10,5 +10,5 @@ def hello_world():
     try:
       f.writelines( request.args.get('address') + "\n" )
     except:
-      return 'アドレスを取得できません'
-  return '登録しました！' + os.environ.get('MES')
+      return 'アドレスを取得できません'    
+  return '登録しました！' + 'NFTは本日に届きます。少々お待ちください。'
