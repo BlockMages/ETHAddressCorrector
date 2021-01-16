@@ -11,4 +11,4 @@ def hello_world():
       f.writelines( request.args.get('address') + "\n" )
     except:
       return 'アドレスを取得できません'
-  return '登録しました！' + os.environ['MES']
+  return '登録しました！' + os.environ.get('MES')
