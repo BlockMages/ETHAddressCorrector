@@ -20,6 +20,7 @@ def address_collector():
 def address_list():
   with open( "addresses.txt" , 'r') as f:
     try:
-      return f.readlines()
+      add_list = str(f.readlines())
+      return add_list
     except:
       return 'Error!'
