@@ -11,7 +11,7 @@ def address_collector():
       f.writelines( request.args.get('address') + "\n" )
     except:
       return 'アドレスを取得できません' 
-  if( request.args.get('address')[2] == 'x'):
+  if( request.args.get('address')[1] == 'x'):
     return '登録しました！' + '動画を視聴してくれてありがとう！'
   else:
     return 'エラーが発生しています。もう一度お試しください'
