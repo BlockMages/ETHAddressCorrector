@@ -10,8 +10,8 @@ def address_collector():
     try:
       f.writelines( request.args.get('address') + "\n" )
     except:
-      return 'アドレスを取得できません' 
+      return 'Error! data registration is crashed!' 
   if( request.args.get('address')[1] == 'x'):
-    return '登録しました！' + '動画を視聴してくれてありがとう！'
+    return 'Thank you for watching! Your Blockchain Address is registrated!'
   else:
-    return 'エラーが発生しています。もう一度お試しください'
+    return 'Your address is not registrated. please try again.'
