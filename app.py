@@ -15,3 +15,11 @@ def address_collector():
     return 'Thank you for watching! Your Blockchain Address is registrated!'
   else:
     return 'Your address is not registrated. please try again.'
+
+@app.route('/list')
+  def address_list():
+    with open( "addresses.txt" , 'r') as f:
+      try:
+        return f.readlines()
+      except:
+        return 'Error!'
