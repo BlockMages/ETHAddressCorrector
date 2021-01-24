@@ -22,7 +22,7 @@ def address_list():
     try:
       add_list = str(f.readlines())
 #      add_list2 = add_list.replace( "\\n" , "<br>").replace("\'" , "").replace("[" , "").replace("]" , "").replace("," , "")
-      add_list2 = add_list.replace( "\\n" , ",").replace("\'" , "\"").replace("[" , "").replace("]" , "")
+      add_list2 = "[" + add_list.replace( "\\n" , "").replace("\'" , "\"").replace("[" , "").replace("]" , "") + "]"
       return add_list2
     except:
       return 'Error!'
