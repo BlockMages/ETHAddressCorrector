@@ -22,7 +22,7 @@ def address_list():
   with open( "addresses.txt" , 'r') as f:
     try:
       for l in f:
-        addresslistmulti.append(l.strip())
+        addresslistmulti.append(l.strip().replace("\'" , "\""))
 #      add_list = str(f.readlines())
 #      add_list2 = add_list.replace( "\\n" , "<br>").replace("\'" , "").replace("[" , "").replace("]" , "").replace("," , "")
 #      add_list2 = "[" + add_list.replace( "\\n" , "").replace("\'" , "\"").replace("[" , "").replace("]" , "") + "]"
