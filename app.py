@@ -18,11 +18,15 @@ def address_collector():
 
 @app.route('/list')
 def address_list():
+  addresslistmulti = []
   with open( "addresses.txt" , 'r') as f:
     try:
-      add_list = str(f.readlines())
+      for l in f:
+        addresslistmulti.append(l.strip())
+#      add_list = str(f.readlines())
 #      add_list2 = add_list.replace( "\\n" , "<br>").replace("\'" , "").replace("[" , "").replace("]" , "").replace("," , "")
-      add_list2 = "[" + add_list.replace( "\\n" , "").replace("\'" , "\"").replace("[" , "").replace("]" , "") + "]"
-      return add_list2
+#      add_list2 = "[" + add_list.replace( "\\n" , "").replace("\'" , "\"").replace("[" , "").replace("]" , "") + "]"
+      addresslistorig = set(addresslistmulti)
+      return addresslistorig
     except:
       return 'Error!'
