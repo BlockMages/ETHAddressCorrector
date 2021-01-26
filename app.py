@@ -27,6 +27,6 @@ def address_list():
 #      add_list2 = add_list.replace( "\\n" , "<br>").replace("\'" , "").replace("[" , "").replace("]" , "").replace("," , "")
 #      add_list2 = "[" + add_list.replace( "\\n" , "").replace("\'" , "\"").replace("[" , "").replace("]" , "") + "]"
       addresslistorig = set(addresslistmulti)
-      return addresslistorig
+      return str(addresslistorig)
     except:
       return 'Error!'
